@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Saripaar Test in Kotlin</string>
+    <string name="action_settings">Settings</string>
+</resources>
