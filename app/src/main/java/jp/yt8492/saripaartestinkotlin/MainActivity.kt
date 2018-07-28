@@ -8,6 +8,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
 
+import jp.yt8492.saripaartestinkotlin.NotBlank
+
 import com.mobsandgeeks.saripaar.ValidationError
 import com.mobsandgeeks.saripaar.Validator
 import com.mobsandgeeks.saripaar.annotation.ConfirmPassword
@@ -60,6 +62,9 @@ class MainActivity : AppCompatActivity() ,Validator.ValidationListener{
         editPass2 = edit_pass_confirm
 
         validator = Validator(this)
+        validator.put(editId, NotBlank())
+        validator.put(editPass1, NotBlank())
+        validator.put(editPass2, NotBlank())
         validator.setValidationListener(this)
 
         button.setOnClickListener {
